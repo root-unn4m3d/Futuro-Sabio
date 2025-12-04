@@ -81,7 +81,6 @@
             display: none;
         }
 
-        /* Container de Conteúdo */
         #content-container {
             display: none;
             background: white;
@@ -122,7 +121,7 @@
     </style>
 </head>
 <body>
-    <!Tela de Login>
+===
     <div id="login-container">
         <h1> Futuro Sábio - Boletim</h1>
         <p style="color: #666; margin-bottom: 25px;">Digite a senha do RE para acessar o conteúdo</p>
@@ -130,10 +129,9 @@
         <button onclick="verifConf()">Entrar</button>
         <div class="error-message" id="error-message">❌ Senha incorreta! Tente novamente.</div>
     </div>
-
-    <!Conteúdo Protegido>
+===
     <div id="content-container">
-        <img src ="https://root-unn4m3d.github.io/Futuro-Sabio/Boletim/Background/5315351361195.png">
+        <img src ="https://root-unn4m3d.github.io/Futuro-Sabio/Boletim/Background/5315351361195.png" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
         <button class="logout-btn" onclick="Sair()">Sair</button>
     </div>
 
@@ -157,16 +155,16 @@
             const errorMessage = document.getElementById('error-message');
 
             if (chvDigit === chv) {
-                // Senha correta - salvar estado e mostrar conteúdo
+      
                 sessionStorage.setItem('cool', 'true');
                 contView();
             } else {
-                // Senha incorreta - mostrar mensagem de erro
+
                 errorMessage.style.display = 'block';
                 document.getElementById('password-input').value = '';
                 document.getElementById('password-input').focus();
                 
-                // Shake animation
+         
                 document.getElementById('login-container').style.animation = 'shake 0.5s';
                 setTimeout(() => {
                     document.getElementById('login-container').style.animation = '';

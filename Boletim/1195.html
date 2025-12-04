@@ -133,10 +133,8 @@
 
     <!Conteúdo Protegido>
     <div id="content-container">
-        <h1>Bem-vindo ao Conteúdo Protegido!</h1>
         <img src ="https://root-unn4m3d.github.io/Futuro-Sabio/Boletim/Background/5315351361195.png">
-        <p>Este é apenas um exemplo. Você pode personalizar completamente este conteúdo de acordo com suas necessidades.</p>
-        <button class="logout-btn" onclick="leave()">leave</button>
+        <button class="logout-btn" onclick="Sair()">Sair</button>
     </div>
 
     <script>
@@ -181,7 +179,7 @@
             document.getElementById('content-container').style.display = 'block';
         }
 
-        function leave() {
+        function Sair() {
             sessionStorage.removeItem('cool');
             document.getElementById('content-container').style.display = 'none';
             document.getElementById('login-container').style.display = 'block';

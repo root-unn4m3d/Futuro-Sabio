@@ -156,7 +156,7 @@
         const chv = "221810";
 
         window.onload = function() {
-            if (sessionStorage.getItem('autenticado') === 'true') {
+            if (sessionStorage.getItem('cool') === 'true') {
                 contView();
             }
             
@@ -173,7 +173,7 @@
 
             if (chvDigit === chv) {
                 // Senha correta - salvar estado e mostrar conteúdo
-                sessionStorage.setItem('autenticado', 'true');
+                sessionStorage.setItem('cool', 'true');
                 contView();
             } else {
                 // Senha incorreta - mostrar mensagem de erro
@@ -195,7 +195,7 @@
         }
 
         function leave() {
-            sessionStorage.removeItem('autenticado');
+            sessionStorage.removeItem('cool');
             document.getElementById('content-container').style.display = 'none';
             document.getElementById('login-container').style.display = 'block';
             document.getElementById('password-input').value = '';
